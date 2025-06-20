@@ -1,0 +1,213 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profiles | Student Profile System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to right, #3b3b98, #1e3799);
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+      transition: background 0.4s ease;
+    }
+    body.dark-mode {
+      background: #121212 !important;
+      color: #f0f0f0 !important;
+    }
+    .sidebar {
+      background-color: #2f3e9e;
+      color: white;
+      width: 240px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      border-top-right-radius: 20px;
+    }
+    .sidebar h2 {
+      font-weight: bold;
+      font-size: 22px;
+      margin-bottom: 40px;
+    }
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 8px;
+      display: block;
+      transition: 0.3s;
+    }
+    .sidebar a:hover, .sidebar a.active {
+      background-color: #3b3b98;
+    }
+    .main-content {
+      margin-left: 260px;
+      padding: 40px;
+      background-color: #f4f6fc;
+      min-height: 100vh;
+    }
+    .profile-card {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .profile-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .profile-card h5 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .btn-view {
+      background-color: #3b3b98;
+      color: white;
+      border-radius: 12px;
+      padding: 8px 20px;
+      text-decoration: none;
+    }
+    .btn-view:hover {
+      background-color: #1e3799;
+    }
+    .dark-mode .sidebar {
+      background-color: #1e1e2f !important;
+    }
+    .dark-mode .main-content {
+      background-color: #1a1a1a !important;
+    }
+    .dark-mode .profile-card {
+      background-color: #252525 !important;
+      color: #f0f0f0;
+    }
+    .dark-mode .btn-view {
+      background-color: #4e4e4e !important;
+      color: #f0f0f0;
+    }
+    .dark-mode .btn-view:hover {
+      background-color: #6e6e6e !important;
+    }
+    .toggle-container {
+      margin-top: auto;
+      padding-top: 20px;
+    }
+    footer.footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      font-size: 14px;
+      background-color: #f8f9fa;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .dark-mode footer.footer {
+      background-color: #1e1e1e !important;
+      color: #ccc !important;
+    }
+    .dark-mode footer.footer a {
+      color: #f0f0f0;
+    }
+    footer.footer a {
+      text-decoration: none;
+      color: #3b3b98;
+    }
+    footer.footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar d-flex flex-column">
+    <h2>ZS Student eProfile</h2>
+    <a href="index.html">Dashboard</a>
+    <a href="profile.html" class="active">Profile List</a>
+    <a href="grade.html">Grade</a>
+    <a href="achivement.html">Achivement</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Log Out</a>
+
+    <div class="form-check form-switch toggle-container mt-auto pt-4">
+      <input class="form-check-input" type="checkbox" id="darkModeToggle">
+      <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <h3>Student Profiles</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="profile-card">
+          <img src="amierulhaqeem.jpeg" alt="Student">
+          <h5>Muhammad Amierul Haqeem</h5>
+          <p>Bachelor of Information Science (Hons) Information System Management</p>
+          <a href="profile1.html" class="btn btn-view">View Profile</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="profile-card">
+          <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Student">
+          <h5>Ali Rahman</h5>
+          <p>Focused on software engineering and open-source projects.</p>
+          <a href="profile2.html" class="btn btn-view">View Profile</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="profile-card">
+          <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Student">
+          <h5>Nadia Zulkifli</h5>
+          <p>Loves UI/UX design and frontend web development.</p>
+          <a href="profile3.html" class="btn btn-view">View Profile</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="profile-card">
+          <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Student">
+          <h5>Daniel Wong</h5>
+          <p>Interested in cybersecurity and ethical hacking.</p>
+          <a href="profile4.html" class="btn btn-view">View Profile</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="profile-card">
+          <img src="https://randomuser.me/api/portraits/women/5.jpg" alt="Student">
+          <h5>Aisyah Bakar</h5>
+          <p>Backend developer with a love for databases and APIs.</p>
+          <a href="profile5.html" class="btn btn-view">View Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer mt-auto py-3 bg-light text-center shadow-sm border-top" id="site-footer">
+    <div class="container">
+      <p class="mb-0">
+        &copy; 2025 <strong>ZS Student Profile System</strong>. All rights reserved.
+        <br/>
+        <small>Follow us on 
+          <a href="https://www.instagram.com" target="_blank">Instagram</a> | 
+          <a href="https://wa.me/60123456789" target="_blank">WhatsApp</a> | 
+          <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+        </small>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
